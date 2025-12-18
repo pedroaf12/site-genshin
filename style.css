@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor-fundo: #1B1E2B;
+    --cor01: #818181;
+    --fonte-normal: "Lexend", sans-serif;
+}
+
+body {
+background-color: var(--cor-fundo);}
