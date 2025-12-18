@@ -1,6 +1,8 @@
 const form = document.getElementById("formLogin");
 const btn = document.getElementById("btnSubmitLogin");
 
+
+
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // impede recarregar a página
 
