@@ -8,21 +8,24 @@
 }
 
 :root {
-    --cor-fundo: #1B1E2B;
-    --cor01: #818181;
+    --cor00: #1B1E2B;
+    --cor01: #2C2F4A;
+    --cor02: #818181;
     --fonte-normal: "Lexend", sans-serif;
 }
+
 header {
     background-color: #818181;
     height: 10vh;
-    color: white;
-    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header > img {
-    color: white;
-    height: 10pv;
-    width: 100px;
+    height: 40px;
+    width: auto;
 }
 
 main {
@@ -36,16 +39,16 @@ main {
 }
 
 section{
-    background: rgba(255, 255, 255, 0.15);
-    /* backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px); */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     height: 400px;
     width: 300px;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgb(88, 88, 88);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 
     display: flex;
     flex-flow: column nowrap;
@@ -73,13 +76,23 @@ h1, p {
     margin-bottom: 5px;
 }
 
+p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
 div.campo {
-    margin: 10px;
+    margin: 12px 0;
     border: none;
     border-bottom: 1px solid #afafaf;
+    /* transition: all 0.3s ease; */
     border-radius: 10px 10px 0px 0px;
 }
 
+div.campo:hover {
+    border: 1px solid #afafaf;
+    border-radius: 10px 10px 10px 10px;
+}
 
 
 div.campo > input {
@@ -88,19 +101,61 @@ div.campo > input {
     width: 245px;
     padding: 5px;
     padding-bottom: 0px;
-
     border: none;
+
+    color: white;
+    outline: none;
+    font-size: 14px;
+    
  
 }
 
-div.campo:hover {
-    border: none;
+div.campo:has(input:focus) {
+    border: 1px solid var(--cor02);
+    box-shadow: 0 0 8px rgba(44, 28, 110, 0.425);
     border: 1px solid #afafaf;
     border-radius: 10px 10px 10px 10px;
 }
 
+
+
+
+
 input::placeholder{
     color: rgba(190, 190, 190, 0.966);
+}
+
+#btnSubmitLogin {
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+
+    background: linear-gradient(120deg, var(--cor00) , var(--cor02));
+    color: white;
+    border: none;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#btnSubmitLogin:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+form > a {
+    margin-top: 10px;
+    color: #838da1;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+form > a:hover {
+    text-decoration: underline;
 }
 
 @keyframes surgir {

@@ -6,10 +6,13 @@
 }
 
 :root {
-    --cor-fundo: #1B1E2B;
-    --cor01: #818181;
+    --cor00: #1B1E2B;
+    --cor01: #2C2F4A;
+    --cor02: #818181;
     --fonte-normal: "Lexend", sans-serif;
 }
 
 body {
-background-color: var(--cor-fundo);}
+    background: linear-gradient(135deg, var(--cor00), var(--cor01));
+    font-family: var(--fonte-normal);
+}
