@@ -1,15 +1,28 @@
 const form = document.getElementById("formLogin");
 const btn = document.getElementById("btnSubmitLogin");
 
+const campos = {
+    user: document.getElementById("user"),
+    senha: document.getElementById("senha")
+};
 
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-form.addEventListener("submit", function (event) {
-  event.preventDefault(); // impede recarregar a página
+    const usuarioSalvo = JSON.parse(localStorage.getItem("usuario"));
 
-  console.log(btn.value); // "Confirmar"
+    if (!usuarioSalvo) {
+        alert("Nenhum usuário cadastrado!");
+        return;
+    }
 
-  const usuario = document.getElementById("username").value;
-  const senha = document.getElementById("senha").value;
-
-  console.log(usuario, senha);
+    if (
+        campos.user.value === usuarioSalvo.user &&
+        campos.senha.value === usuarioSalvo.senha
+    ) {
+        alert("Login realizado com sucesso!");
+        // window.location.href = "dashboard.html";
+    } else {
+        alert("Usuário ou senha inválidos!");
+    }
 });

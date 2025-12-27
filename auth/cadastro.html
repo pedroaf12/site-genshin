@@ -16,28 +16,41 @@
         <section>
             
             <div class="formulario">
-                <div>
+                <div class="texto-entrada">
                     <h1>CADASTRO</h1>
-                    <p>Seja Bem vindo o sistema de Armazenamento de dispositvos TNS </p>
+                    <p>Seja Bem vindo o sistema <br> de armazenamento de dados  </p>
                 </div>
 
                 <form action="#" id="formLogin">
 
                     <div class="campo">
-                        <input type="text" id="user" placeholder="Digite seu Username">
+                        <input type="text" id="user" placeholder="Digite seu Username" autocomplete="off">
                     </div>
 
-                    <div class="campo">
-                        <input type="email" id="mail" placeholder="Digite seu E-mail">
-                    </div>
+                    
 
-                    <div class="campo">
-                        <input type="password" id="senha" placeholder="Digite sua Senha">
+                    <div class="grupo-senha">
+                        <div class="campo">
+                            <input type="password" id="senha" placeholder="Digite sua Senha">
+                        </div>
+                        <div class="campo">
+                            <input type="password" id="confirmarSenha" placeholder="Confirme sua Senha">
+                        </div>
                     </div>
                     
-                    <div>
+                    <div class="campo">
+                        <input type="email" id="mail" placeholder="exemplo@mail.com">
+                    </div>
+
+                    <div class="campo">
+                        <input type="tel" id="celular" placeholder="(XX) XXXXX-XXXX">
+                    </div> 
+
+                    <div class="confirmar">
                         <input type="submit" value="Confirmar" id="btnSubmitLogin">
                     </div>
+
+                    
 
                 </form>
             </div>
@@ -45,6 +58,6 @@
         </section>
     </main>
 
-    <script src="login.js"></script>
+    <script src="cadastro.js"></script>
 </body>
 </html>
